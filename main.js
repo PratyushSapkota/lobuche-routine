@@ -23,13 +23,13 @@ document.getElementById("dayRight").innerHTML = fullDate
 // LOBUCHE
 
 monday = {
-    1: "Nepali",
+    1: "Computer, S",
     2: "Math, R",
     3: "Adv Programming",
     4: "Adv Programming",
     5: "Computer, S",
-    6: "Computer, S",
-    7: "English",
+    6: "Nepali",
+    7: "Math, B",
     8: "Chemistry, D"
 }
 tuesday = {
@@ -50,27 +50,27 @@ wednesday = {
     5: "Math, B",
     6: "English",
     7: "Nepali",
-    8: "Maths, B"
+    8: "English"
 }
 thursday = {
     1: "Physics, A",
     2: "Chemistry, S",
     3: "Math, B",
     4: "English",
-    5: "DSS Talk",
-    6: "Computer, S",
-    7: "Math, R",
-    8: "Nepali"
+    5: "Computer, S",
+    6: "DSS Talk",
+    7: "Nepali",
+    8: "Math, R"
 }
 friday = {
     1: "Basic Programming",
     2: "Basic Programming",
     3: "Physics Practical",
     4: "Physics Practical",
-    5: "Physics, U",
-    6: "Math, B",
-    7: "Nepali",
-    8: "English"
+    5: "Nepali",
+    6: "English",
+    7: "Physics, U",
+    8: "Math, B"
 }
 
 let td = new Date().getDay();
