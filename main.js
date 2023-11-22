@@ -48,7 +48,7 @@ wednesday = {
     3: "Chemistry Practical",
     4: "Chemistry Practical",
     5: "Math, B",
-    6: "English",
+    6: "DSS Talk",
     7: "Nepali",
     8: "English"
 }
@@ -58,7 +58,7 @@ thursday = {
     3: "Math, B",
     4: "English",
     5: "Computer, S",
-    6: "DSS Talk",
+    6: "English",
     7: "Nepali",
     8: "Math, R"
 }
