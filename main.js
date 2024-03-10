@@ -25,12 +25,10 @@ document.getElementById("dayRight").innerHTML = fullDate
 monday = {
     1: "Computer, S",
     2: "Math, R",
-    3: "Adv Programming",
-    4: "Adv Programming",
-    5: "Computer, S",
-    6: "Nepali",
-    7: "Math, B",
-    8: "Chemistry, D"
+    3: "Chemistry, D",
+    4: "Physics, M",
+    5: "Nepali",
+    6: "Math, B"
 }
 tuesday = {
     1: "Physics, A",
@@ -38,40 +36,33 @@ tuesday = {
     3: "Nepali",
     4: "English",
     5: "Chemistry, S",
-    6: "Computer, S",
-    7: "Physics, M",
-    8: "Physics, U"
+    6: "Physics, U"
 }
 wednesday = {
     1: "Math, R",
     2: "Chemitry, RDP",
-    3: "Chemistry Practical",
-    4: "Chemistry Practical",
-    5: "Math, B",
-    6: "DSS Talk",
-    7: "Nepali",
-    8: "English"
+    3: "Chemistry, D",
+    4: "Physics, M",
+    5: "Physics, U",
+    6: "Math, B"
 }
 thursday = {
     1: "Physics, A",
     2: "Chemistry, S",
-    3: "Math, B",
+    3: "Computer",
     4: "English",
-    5: "Computer, S",
-    6: "English",
-    7: "Nepali",
-    8: "Math, R"
+    5: "Math, B",
+    6: "Physics, Mz"
 }
 friday = {
-    1: "Basic Programming",
-    2: "Basic Programming",
-    3: "Physics Practical",
-    4: "Physics Practical",
+    1: "Computer",
+    2: "Math, R",
+    3: "Physics, Mz",
+    4: "Math, B",
     5: "Nepali",
-    6: "English",
-    7: "Physics, U",
-    8: "Math, B"
+    6: "English"
 }
+
 
 let td = new Date().getDay();
 classes = document.getElementById("routine");
@@ -98,42 +89,57 @@ function tomorrow(){
 }
 
 
+function show(_data) {
+    classes.innerHTML = `
+    <div id="container">
+        <div class='each'>${_data["1"]}</div>
+        <div class='each'>${_data["2"]}</div>
+        <div class="break">Break</div>
+        <div class='each'>${_data["3"]}</div>
+        <div class='each'>${_data["4"]}</div>
+        <div class="break">Lunch Break</div>
+        <div class='each'>${_data["5"]}</div>
+        <div class='each'>${_data["6"]}</div>
+    </div>    
+    `
+}
+
 
 function mondayShow() {
-    classes.innerHTML = `${monday["1"]} <br> ${monday["2"]} <div id="break">Break</div> ${monday["3"]} <br> ${monday["4"]} <div id="break">Lunch Break</div>  ${monday["5"]} <br> ${monday["6"]} <div id="break">Break</div> ${monday["7"]} <br> ${monday["8"]} `;
+    show(monday);
     dayShow.innerHTML = "Monday";
 };
 
 function tuesdayShow() {
-    classes.innerHTML = `${tuesday["1"]} <br> ${tuesday["2"]} <div id="break">Break</div> ${tuesday["3"]} <br> ${tuesday["4"]} <div id="break">Lunch Break</div> ${tuesday["5"]} <br> ${tuesday["6"]} <div id="break">Break</div> ${tuesday["7"]} <br> ${tuesday["8"]} `;
+    show(tuesday);
     dayShow.innerHTML = "Tuesday";
-     
+    
 };
 
 function wednesdayShow() {
-    classes.innerHTML = `${wednesday["1"]} <br> ${wednesday["2"]} <div id="break">Break</div> ${wednesday["3"]} <br> ${wednesday["4"]} <div id="break">Lunch Break</div> ${wednesday["5"]} <br> ${wednesday["6"]} <div id="break">Break</div> ${wednesday["7"]} <br> ${wednesday["8"]} `;
+    show(wednesday);
     dayShow.innerHTML = "Wednesday";
-     
+    
 };
 
 function thursdayShow() {
-    classes.innerHTML = `${thursday["1"]} <br> ${thursday["2"]} <div id="break">Break</div> ${thursday["3"]} <br> ${thursday["4"]} <div id="break">Lunch Break</div>  ${thursday["5"]} <br> ${thursday["6"]} <div id="break">Break</div> ${thursday["7"]} <br> ${thursday["8"]} `;
+    show(thursday);
     dayShow.innerHTML = "Thursday";
-     
+    
 };
 
 function fridayShow() {
-    classes.innerHTML = `${friday["1"]} <br> ${friday["2"]} <div id="break">Break</div> ${friday["3"]} <br> ${friday["4"]} <div id="break">Lunch Break</div>  ${friday["5"]} <br> ${friday["6"]} <div id="break">Break</div> ${friday["7"]} <br> ${friday["8"]} `;
+    show(friday);
     dayShow.innerHTML = "Friday";
      
 };
 function sundayShow() {
-    classes.innerHTML = "No Classes today!";
+    classes.innerHTML = "No Classes on Sunday!";
     dayShow.innerHTML = "Sunday";
      
 };
 function saturdayShow() {
-    classes.innerHTML = "No Classes today!";
+    classes.innerHTML = "No Classes Saturday!";
     dayShow.innerHTML = "Saturday";
      
 };
